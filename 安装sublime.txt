@@ -1,0 +1,15 @@
+首先配置Texlive或者是MikTex
+1、先去官网下载Sublime Text ，正常安装
+http://www.sublimetext.com/3
+2、然后打开sublime安装Package Control
+参考：http://www.360doc.com/content/14/0517/19/9206388_378573988.shtml
+3、然后安装LaTeXTools ：
+安装Package Control 后通过按组合键Ctrl+Shift+P或是点击Preference->Package Control，然后再输入 install，选择 Package Control: install package。 
+然后输入latex，选择 LaTeXTools 进行安装即可。
+4、下载sumatra，就是个pdf阅读器
+4、配置路径等问题，参考下面链接
+https://blog.csdn.net/qazxswed807/article/details/51234834
+5、设置sumatra反向搜索，在PDF中直接双击就能到达tex文件中的位置。打开SumatraPDF，进入设置->选项 对话框，在“设置反向搜索命令行”处（即双击PDF文件时，应运行的命令）填入如下内容：
+"D:\Sublime Text 3\sublime_text.exe" "%f:%l"
+5、测试文件，打开Sublime，新建一个tex文件
+现在CTRL+S，然后CTRL+B（需要现在Tools中的Build设置编辑器）。Sublime Text 就会自动调用 LaTeXTools 的 build 编译器来进行编译，如果编译成功，会自动打开 SumatraPDF 进行预览。至此，配置完成，接下来，可以好好编辑你想要的内容了。

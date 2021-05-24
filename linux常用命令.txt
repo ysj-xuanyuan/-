@@ -1,0 +1,110 @@
+查看显卡使用情况
+nvidia-smi
+
+新建txt等文件
+touch abc.txt
+
+#复制文件：
+shutil.copyfile("oldfile","newfile") #oldfile和newfile都只能是文件
+shutil.copy("oldfile","newfile") #oldfile只能是文件夹，newfile可以是文件，也可以是目标目录
+ 
+#复制文件夹：
+shutil.copytree("olddir","newdir") #olddir和newdir都只能是目录，且newdir必须不存在
+ 
+#重命名文件（目录）
+os.rename("oldname","newname") #文件或目录都是使用这条命令
+ 
+#移动文件（目录）
+shutil.move("oldpos","newpos") 
+shutil.move("D:/知乎日报/latest/一张优惠券，换你的通讯录信息，你愿意吗？.pdf", "D:/知乎日报/past/")
+
+命令行改名字
+mv source_file(文件) dest_file(文件)
+将源文件名 source_file 改为目标文件名 dest_file
+
+查看当前目录下文件数量
+ls  | wc -w
+
+将 /home/html/ 这个目录下所有文件和文件夹打包为当前目录下的 html.zip：
+zip -q -r html.zip /home/html
+如果在我们在 /home/html 目录下，可以执行以下命令：
+zip -q -r html.zip *
+
+
+python format用法
+地址
+https://blog.csdn.net/u012149181/article/details/78965472
+使用学习过程可以结合win的cmd运行下看看结果
+b、d、o、x分别是二进制、十进制、八进制、十六进制
+精度常跟类型f一起使用
+
+scp
+将文件从服务器上下载到本地
+
+
+查看当前路径命令：pwd
+
+os.walk(path)
+    每次遍历的对象都是返回的是一个三元组(root,dirs,files)
+    root 所指的是当前正在遍历的这个文件夹的本身的地址
+    dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)
+    files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)
+
+os.path.join()函数用法
+
+
+list写入txt中
+https://blog.csdn.net/as480133937/article/details/93137001
+
+创建软链接：
+ln -s 源地址（可以是文件/文件夹） 新的地址
+删除软链接：（也就是删除建的那个文件夹）
+rm -rf 新的地址  （注意地址后面不要加‘/’。否则会删除源地址下的文件）
+
+查询存储状态：
+df -h
+
+查询当前文件夹的大小
+du -sh
+
+安装deb的文件
+sudo dpkg -i bcompare-4.3.7.25118_amd64.deb
+
+
+
+Linux查看网络即时网速
+安装： sudo apt install sysstat
+
+sar -n DEV 1 100
+1代表一秒统计并显示一次 
+100代表统计一百次 
+
+安装显卡驱动
+参考：
+https://blog.csdn.net/ezhchai/article/details/80536949
+https://blog.csdn.net/qq_43551834/article/details/108939007
+https://www.cnblogs.com/fanminhao/p/8902296.html
+
+ppa方式安装：
+https://blog.csdn.net/linhai1028/article/details/79445722
+
+
+卸载旧的驱动
+卸载NV驱动和安装一样，首先ctrl+Alt+F2进入命令行状态，然后停止lightdm
+sudo service lightdm stop
+或者
+sudo /etc/init.d/lightdm stop
+
+卸载命令位置/usr/bin/nvidia-uninstall，以下命令即可卸载。
+sudo /usr/bin/nvidia-uninstall
+不找这个命令的位置，也可以
+sudo apt-get purge nvidia*
+sudo apt-get remove nvidia* -y
+安装：
+sudo chmod a+x NVIDIA-Linux-x86_64-xxx.run
+sudo sh NVIDIA-Linux-x86_64-xxx.run -no-opengl-files
+
+
+
+
+

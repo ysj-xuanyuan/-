@@ -1,0 +1,52 @@
+显卡、CUDA、TensorFlow、PyTorch等之间各个版本问题大总结:
+https://www.pianshen.com/article/97091443911/
+
+linux查显卡型号_显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？
+https://blog.csdn.net/weixin_39851279/article/details/112338619
+
+安装cuda
+官网：https://developer.nvidia.com/cuda-toolkit-archive
+https://blog.csdn.net/weixin_43429591/article/details/109207135
+https://blog.csdn.net/zhiman_zhong/article/details/91491780
+
+命令行安anaconda：https://blog.csdn.net/qq_38262728/article/details/88708664
+
+安装anaconda
+bash Anaconda3-2020.11-Linux-x86_64.sh 
+
+虚拟环境
+conda create -n name python=3.7
+conda activate name
+conda-env list
+
+
+add channels:
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+
+
+conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0
+conda install opencv
+conda install scikit-image
+conda install -c conda-forge tqdm
+conda install matplotlib
+
+test：
+import torch
+import numpy
+
+import skimage
+
+import matplotlib
+import tqdm
+
+import cv2
+
+
+
+【CUDA】nvcc和nvidia-smi显示的版本不一致的解释
+https://www.jianshu.com/p/eb5335708f2a
+

@@ -1,0 +1,36 @@
+本地仓库操作：
+工作区（working Directory）、暂存区、Git仓库（Git Repository）
+git status 查看当前情况
+git add 1.txt 将txt文件工作区文件添加到暂存区
+git commit -m  1.txt'提交描述' 将暂存区文件提交到Git仓库
+
+删除工作区的文件：rm -rf 1.txt
+删除暂存区的文件：git rm 1.txt
+提交操作：git commit -m '提交描述'
+
+git config --global user.name "ysj-xuanyuan"	配置用户名
+git config --global user.email "1161126955@qq.com"	配置用户邮箱
+git config --list	可以产看配置情况
+该设置再GitHub仓库主页显示谁提交该文件
+
+git init 仓库初始化，用来存储仓库所有信息
+
+这样本地仓库就初始化好了！
+
+
+Git远程仓库操作：
+****备份，实现代码统一化管理****
+
+git clone 将远程仓库代码复制到本地
+
+git push 将本地仓库的代码提交到远程仓库
+第一次提交需要输入密码。然后出来的ssh重新输入账号、密码
+
+设置权限（待更新）
+
+分支（待更新）
+
+
+
+
+

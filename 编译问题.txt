@@ -1,0 +1,4 @@
+编译中遇到
+subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+
+改下/home/test/anaconda3/envs/py38/lib/python3.8/site-packages/torch/utils目录下的cpp_extension.py中的1615行-v改成--v或--version
