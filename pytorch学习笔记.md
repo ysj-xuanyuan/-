@@ -1,4 +1,4 @@
-@[pytoch学习笔记](哈哈哈)
+@[pytoch学习笔记](ysj)
 
 #DataLoader：
 参考博客：https://www.cnblogs.com/ranjiewen/p/10128046.html
