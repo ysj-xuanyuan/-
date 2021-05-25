@@ -22,5 +22,23 @@ list、tuple等都是可迭代对象，我们可以通过iter()函数获取这�
 #补偿lr设置
 
 ```python
-torch.optim.lr_sheduler.ReduceLROnPlateau(optimizer,model=’min’,factor=0.1,patience=10,verbose=False,th)
+#源码
+torch.optim.lr_sheduler.ReduceLROnPlateau(optimizer,model='min',factor=0.1,patience=10,verbose=False,threshold=0.0001,threshold_model='Rel',coldown=0,min_lr=0,eps=1e-08)
+
+#调用
+scheduler = ReduceLROnPlateau(optimizer,'min')
+scheduler.step(loss_val)#每调用一次监听一次loss，如果符合提前设置的规则就降低loss
+
+scheduler = StepLR(optimizer,step_size=30,gamma=0.1)#lr每隔30个epoch降低0.1
+scheduler.step(loss_val)
+
 ```
+
+#训练技巧（防止过拟合等）
+##Early Stopping
+注意训练loss与测试loss是否一致
+
+用Validation set 做一个选择，在最高点停止（依靠经验）
+
+##Dropout
+提升鲁棒性（Robustness），减少over feating.
